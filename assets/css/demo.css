@@ -1,0 +1,446 @@
+/*=========================================================
+        Google Fonts
+  =========================================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400;500;700;900&display=swap');
+
+/*=========================================================
+        Helper Css
+  =========================================================
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Yantramanav', sans-serif;
+    color: #202020;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+    background-color: #0030b8;
+    border-radius: 0px;
+}
+
+::-moz-selection {
+    background: #000;
+    color: #fff
+}
+
+::selection {
+    background: #000;
+    color: #fff
+}
+
+::-moz-selection {
+    background: #000;
+    color: #fff
+}
+
+button:focus {
+    outline: none;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-family: "Yantramanav";
+    font-weight: 900;
+    color: #202020;
+}
+
+h2 {
+    font-size: 50px;
+    line-height: 50px;
+    font-family: "Yantramanav";
+    font-weight: 900;
+    color: #202020;
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 35px;
+    font-family: "Yantramanav";
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 700;
+    font-family: "Yantramanav";
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Yantramanav";
+}
+
+h6 {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "Yantramanav";
+}
+
+h5,
+h6 {
+    margin: 0;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: "Yantramanav";
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    font-family: "Yantramanav";
+}
+
+a:hover {
+    color: unset;
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+.btn-1 {
+    color: #202020;
+    display: inline-block;
+    padding: 16px 75px;
+    background-color: #ffffff;
+    font-size: 30px;
+    font-family: "Yantramanav";
+    font-weight: 500;
+    text-transform: capitalize;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-title h1 {
+    padding-bottom: 25px;
+    color: #0030b8;
+}
+
+.section-title h2 {}
+
+.section-title h3 span {
+    color: #0030b8;
+}
+
+.section-title h3 {
+    padding-top: 32px;
+    font-weight: 400;
+}
+
+.media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.introducing-demo .container {
+    max-width: 1600px;
+}
+
+
+/* 
+    Hover Effects 
+*/
+
+.team-hover {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.team-hover:hover .hover-dir {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-dir {
+    position: absolute;
+    background: #0030b8;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+
+/*=========================================================
+        Introducing Demos
+  =========================================================
+*/
+
+.introducing-demo {
+    padding: 122px 0 115px;
+}
+
+.filter-change {
+    padding: 55px 0 40px;
+}
+
+.filter-change button {
+    background: none;
+    border: 1px solid #0030b8;
+    color: #202020;
+    border-radius: 20px;
+    padding: 4px 15px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 4px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.filter-change .active {
+    background-color: #0030b8;
+    color: #ffffff;
+}
+
+.introducing-margin {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.introducing-all {
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.12));
+    background-color: #5cd901;
+}
+
+.single-introducing {
+    text-align: center;
+    position: relative;
+}
+
+.introducing-margin h5 {
+    padding-top: 22px;
+}
+
+.introducing-margin h5 a {
+    color: #292929;
+}
+
+.introducing-margin h5 a:hover {
+    color: #5cd901;
+}
+
+.introducing-image {}
+
+.introducing-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.introducing-links {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.introducing-all .hover-dir {
+    background: #0030b8b3;
+}
+
+.introducing-links a:hover {
+    background: #ffffff;
+    color: #0030b8;
+}
+
+.introducing-links a {
+    background: #202020;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 25px;
+    border-radius: 30px;
+    padding: 8px 35px;
+    margin: 0 5px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.coming-soon::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #0030b8ed;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.coming-soon {
+    position: relative;
+    z-index: -1;
+}
+
+.introduce-absolute-text {}
+
+.introduce-absolute-text h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+}
+
+
+/*
+========================================
+Preloader
+========================================
+*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.lds-css {
+    display: block;
+    position: relative;
+    left: 46%;
+    top: 46%;
+    width: 70px;
+    height: 70px;
+}
+
+
+/* preloader 3 */
+
+.preloader-3 {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    padding: 0px;
+    text-align: left;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    transform: translate(-50%, -50%);
+}
+
+.preloader-3 span {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #5cd901;
+    -webkit-animation: preloader 1.3s linear infinite;
+    animation: preloader 1.3s linear infinite;
+}
+
+.preloader-3 span:last-child {
+    animation-delay: -0.8s;
+    -webkit-animation-delay: -0.8s;
+}
+
+@keyframes preloader {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes preloader {
+    0% {
+        -webkit-transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+@keyframes preloader {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes preloader {
+    0% {
+        -webkit-transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+        opacity: 0;
+    }
+}
