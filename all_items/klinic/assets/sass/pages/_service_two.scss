@@ -1,0 +1,38 @@
+// Service-Two Area Starts
+.service-area-two {
+    .single-service-two {
+        &:hover {
+            .service-icon-flex {
+                .common-title {
+                    color: $text--base;
+                }
+            }
+        }
+        .service-icon-flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 20px;
+            @include responsive(allPhone) {
+                gap: 10px;
+            }
+            .service-icon {
+                @include box50;
+                @include center;
+                background: $bg--base;
+                img {}
+            }
+            .common-title {}
+        }
+        .common-para {
+            margin-top: 20px;
+            max-width: 350px;
+            @include responsive(md) {
+                width: 100%;
+            }
+        }
+    }
+}

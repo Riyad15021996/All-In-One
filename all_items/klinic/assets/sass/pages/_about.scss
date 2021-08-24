@@ -1,0 +1,301 @@
+// Banner Area
+.banner-area-inner {
+    position: relative;
+    z-index: 1;
+    &::before {
+        @include beforeafter;
+        background: rgba($bg--black, .7);
+        z-index: -1;
+    }
+    .banner-contents {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        padding: 175px 0 130px !important;
+        @include responsive(allPhone) {
+            padding: 170px 0 100px !important;
+        }
+        .banner-title {
+            color: $text--white;
+        }
+    }
+    .banner-bottom {
+        background: #f4f4f4;
+        padding: 25px 0;
+        .banner-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            li {
+                font-size: 14px;
+                font-weight: 700;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                &:not(:last-child) {
+                    padding-right: 10px;
+                }
+                @include responsive(vxxs) {
+                    font-size: 12px;
+                    padding: 0 2px;
+                }
+                i {
+                    color: $text--base;
+                    margin-right: 7px;
+                }
+                &:hover {
+                    color: $text--base;
+                }
+            }
+        }
+    }
+}
+
+// Banner Area Ends
+// Services Area Starts
+.about-service-area {
+    .section-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-bottom: 55px;
+        border-bottom: 1px solid rgba($bg--black, .12);
+        @include responsive(lg) {
+            display: unset;
+        }
+        @include responsive(allPhone) {
+            padding-bottom: 35px;
+            display: unset;
+            text-align: left;
+        }
+        .section-heading {
+            max-width: 550px;
+            text-align: left;
+            border-right: 3px solid $bg--base;
+            margin: 0 0;
+            @include responsive(xl) {
+                min-width: 490px;
+            }
+            @include responsive(lg) {
+                width: 100%;
+                border-right: none;
+                margin: -11px 0 0;
+            }
+            @include responsive(allPhone) {
+                border: none;
+            }
+        }
+        .section-para {
+            padding-left: 40px;
+            text-align: left;
+            margin: 0;
+            max-width: 570px;
+            @include responsive(xl) {
+                padding-left: 30px;
+            }
+            @include responsive(lg) {
+                padding-left: 0;
+                margin-top: 25px;
+                max-width: 600px;
+            }
+            @include responsive(allPhone) {
+                padding-left: 0;
+                margin-top: 30px;
+            }
+        }
+    }
+    .about-contents {
+        padding-left: 40px;
+        max-width: 560px;
+        @include responsive(lg) {
+            padding-left: 10px;
+        }
+        @include responsive(allPhone) {
+            padding-left: 15px;
+            max-width: 500px;
+        }
+        @include responsive(xs) {
+            padding-left: 10px;
+        }
+        .about-service-headings {}
+        .about-service-border {
+            width: 40px;
+            background: $bg--base;
+            display: inline-block;
+            height: 3px;
+            margin-top: 32px;
+        }
+        .common-para {
+            margin-top: 22px;
+        }
+        .about-service-list {
+            margin-top: 30px;
+            li {
+                padding: 10px 0;
+                line-height: 24px;
+                @include responsive(xxs) {
+                    font-size: 14px;
+                }
+                i {
+                    color: $text--base;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.about-service-slider {
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+    .la-angle-right,
+    .la-angle-left {
+        @include leftcenter;
+        background: $bg--white;
+        color: $text--base;
+        @include box50;
+        @include center;
+        left: 20px;
+        border-radius: 5px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 9;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        &:hover {
+            background: $bg--base;
+            color: $text--white;
+        }
+    }
+    .la-angle-right {
+        left: auto;
+        right: 20px;
+    }
+    .single-about-service {
+        img {
+            @include objfit;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            border-radius: 10px;
+        }
+    }
+}
+
+// Services Area Starts
+// Experience Area Starts
+.experience-area {
+    .experience-images {
+        @include responsive(xs) {
+            height: 250px;
+            width: 70%;
+        }
+        @include responsive(xxs) {
+            height: auto;
+            width: 100%;
+        }
+        img {
+            @include objfit;
+            border-radius: 10px;
+        }
+    }
+    .experience-wrapper {
+        padding-left: 60px;
+        @include responsive(lg) {
+            padding-left: 0px;
+        }
+        @include responsive(allPhone) {
+            padding-left: 0px;
+        }
+        @include responsive(xs) {
+            padding-left: 10px;
+        }
+        .section-title {
+            max-width: 485px;
+            .section-heading {
+                @include responsive(lg) {
+                    font-size: 35px;
+                }
+            }
+            .section-border {}
+            .section-para {
+                margin-top: 30px;
+            }
+        }
+        .experience-line-progress {
+            margin-top: 40px;
+            .single-progress {
+                &:last-child {
+                    .line-progress {
+                        .progressbar {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .progress-title {
+                    font-weight: 600;
+                    margin-bottom: 13px;
+                }
+                .line-progress {
+                    .progressbar {
+                        margin-bottom: 30px;
+                        .proggress {}
+                        .percentCount {
+                            margin-top: -42px;
+                            color: $text--base;
+                            font-style: 18px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Experience Area End
+// Newsletter Area Starts
+.newsletter-area {
+    padding: 70px 0 75px;
+    .newsletter-wrapper {
+        text-align: center;
+        .newsletter-title {
+            color: $text--white;
+            margin-bottom: 30px;
+        }
+        .newsletter-form {
+            position: relative;
+            z-index: 1;
+            .form--control {
+                background: $bg--white;
+                height: 60px;
+                border-radius: 50px;
+                padding: 0 80px 0 25px;
+            }
+            button {
+                position: absolute;
+                right: 0;
+                top: 0%;
+                bottom: 0;
+                background: none;
+                color: $text--base;
+                right: 30px;
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

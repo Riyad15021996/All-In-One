@@ -1,0 +1,155 @@
+// Giving-Back Area Starts
+.giving-back-area {
+    div[class*="row"] {
+        &:not(:first-child) {
+            padding-top: 80px;
+            @include responsive(allPhone) {
+                padding-top: 40px;
+            }
+        }
+        &:not(:last-child) {
+            padding-bottom: 80px;
+            border-bottom: 1px solid rgba($text--body, .2);
+            @include responsive(allPhone) {
+                padding-bottom: 40px;
+            }
+        }
+        &:nth-child(2n+2) {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+            @include responsive(allPhone) {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+            }
+            .mission-vission-wrapper {
+                padding-left: 0;
+            }
+        }
+    }
+    .mission-vission-images {
+        img {
+            @include objfit;
+        }
+    }
+    .mission-vission-wrapper {
+        padding-left: 40px;
+        max-width: 530px;
+        @include responsive(allPhone) {
+            padding-left: 10px;
+            padding-top: 30px;
+        }
+        .mission-span {
+            display: block;
+            margin-top: 25px;
+            line-height: 30px;
+            max-width: 440px;
+            i {
+                color: $text--base;
+                margin-right: 5px;
+                font-size: 20px;
+            }
+        }
+        .common-para {
+            margin-top: 20px;
+        }
+        .mission-list {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            margin-top: 30px;
+            @include responsive(allPhone) {
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;
+            }
+            li {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin-bottom: 30px;
+                @include responsive(allPhone) {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                i {
+                    font-size: 10px;
+                    @include center;
+                    background: $bg--base;
+                    color: $text--white;
+                    @include box15;
+                    border-radius: 0 0 50% 50%;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Why Area Starts
+.why-area {
+    .why-wrapper {
+        .single-why {
+            .why-flex-content {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                gap: 15px;
+                .why-image {
+                    @include box50;
+                    @include center;
+                    background: $bg--base;
+                    img {}
+                }
+                .why-heading {
+                    .why-title {}
+                }
+            }
+            .common-para {
+                max-width: 250px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .why-right-img {
+        img {
+            @include objfit;
+        }
+    }
+}
+
+// Why Area Ends
+// Question Area Starts
+.question-area {
+    .question-left-wrapper {
+        .question-title {
+            max-width: 500px;
+            @include responsive(lg) {
+                font-size: 35px;
+            }
+        }
+        .question-span {
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            max-width: 560px;
+            line-height: 32px;
+            @include responsive(lg) {
+                font-size: 18px !important;
+            }
+            @include responsive(allPhone) {
+                font-size: 18px !important;
+            }
+        }
+    }
+}

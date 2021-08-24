@@ -1,0 +1,30 @@
+// 404 Area Starts
+.not-found-area {}
+
+.not-found-wrapper {
+    max-width: 730px;
+    margin: 0 auto;
+    text-align: center;
+    .not-found-image {
+        max-width: 450px;
+        margin: 0 auto 60px;
+        @include responsive(allPhone) {
+            margin: 0 auto 40px;
+        }
+        img {
+            @include objfit;
+        }
+    }
+    .not-found-contents {
+        .common-para {
+            a {
+                color: $text--base;
+                border-bottom: 1px solid $text--base;
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+// 404 Area Ends

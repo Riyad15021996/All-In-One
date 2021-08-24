@@ -1,0 +1,70 @@
+// Service Area Starts
+.service-appoinment-area {
+    .service-appoinment {
+        margin-right: 60px;
+        @include responsive(lg) {
+            margin-right: 0;
+        }
+        @include responsive(allPhone) {
+            margin-right: 0;
+        }
+        .appoinment-inner {
+            background: $bg--white;
+            padding: 60px 30px;
+            @include heavy-black-shadow;
+            border-radius: 10px;
+            text-align: center;
+            margin-left: auto;
+            @include responsive(allPhone) {
+                width: 100%;
+                margin-left: unset;
+            }
+            .appoinment-heading {
+                margin-bottom: 20px;
+            }
+            .appoinment-border {
+                width: 40px;
+                background: $bg--base;
+                display: block;
+                height: 3px;
+                margin: 0 auto 30px;
+            }
+            .appoinment-border {}
+            .appoinment-form {}
+        }
+    }
+    .service-appoinment-wrapper {
+        max-width: 585px;
+        .section-title {
+            .section-para {
+                margin-top: 30px;
+            }
+        }
+        .service-appoinment-right {
+            .common-para {
+                margin-top: 15px;
+                line-height: 30px;
+                font-weight: 300;
+                font-size: 18px;
+                max-width: 580px;
+                @include responsive(lg) {
+                    font-style: 17px;
+                }
+            }
+            .appoinment-list {
+                margin-top: 30px;
+                li {
+                    padding: 10px 0;
+                    line-height: 24px;
+                    @include responsive(xxs) {
+                        font-size: 14px;
+                    }
+                    i {
+                        color: $text--base;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

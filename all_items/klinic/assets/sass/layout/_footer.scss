@@ -1,0 +1,136 @@
+.footer-area {
+    padding-top: 60px;
+    @include responsive(allPhone) {
+        padding-top: 0;
+    }
+    .footer-top {
+        .single-footer {
+            color: $text--white;
+            .common-title {
+                color: $text--white;
+                padding-bottom: 20px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: $bg--base;
+                    height: 3px;
+                    width: 40px;
+                }
+            }
+            .about-contents {
+                padding-top: 30px;
+                .common-para {
+                    margin: 0;
+                    color: rgba($bg--white, .9);
+                    max-width: 350px;
+                }
+                .footer-socials {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 25px;
+                    li {
+                        &:not(:last-child) {
+                            margin-right: 20px;
+                        }
+                        a {
+                            @include box40;
+                            @include center;
+                            background: $bg--base;
+                            font-size: 20px;
+                            transition: all .3s;
+                            &:hover {
+                                background: $bg--white;
+                                color: $text--base;
+                            }
+                        }
+                    }
+                }
+                .footer-list {
+                    margin-top: 10px;
+                    li {
+                        position: relative;
+                        z-index: 1;
+                        color: rgba($bg--white, .9);
+                        &:not(:last-child) {
+                            padding-bottom: 20px;
+                        }
+                        a {
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            -webkit-transition: all .3s;
+                            -o-transition: all .3s;
+                            transition: all .3s;
+                            @include responsive(lg) {
+                                font-size: 14px;
+                            }
+                            &:hover {
+                                color: $text--base;
+                                &::before {
+                                    background: $bg--base;
+                                    color: $text--white;
+                                    margin-right: 7px;
+                                }
+                            }
+                            &::before {
+                                @include line-font;
+                                content: "\f105";
+                                background: $bg--white;
+                                color: $text--heading;
+                                border-radius: 50%;
+                                font-size: 12px;
+                                height: 18px;
+                                width: 18px;
+                                @include center;
+                                -webkit-transition: all .3s;
+                                -o-transition: all .3s;
+                                transition: all .3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright-area {
+        background: $bg--white;
+        padding: 20px 0;
+        .copyright-text {}
+        .copyright-card {
+            .copyright-contents {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                @include responsive(sm) {
+                    -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                }
+                @include responsive(xs) {
+                    -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                }
+                li {
+                    &:not(:first-child) {
+                        margin-left: 15px;
+                    }
+                    a {}
+                }
+            }
+        }
+    }
+}

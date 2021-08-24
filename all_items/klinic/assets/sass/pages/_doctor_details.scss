@@ -1,0 +1,272 @@
+// Doctor Details Area starts
+.doctors-details-area {
+    .doctor-details-left {
+        .single-doctor-details {
+            background: #f4f4f447;
+            border: 1px solid rgba($text--body, .2);
+            border-radius: 10px;
+            overflow: hidden;
+            overflow: hidden;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            .doctor-img-flex {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                gap: 35px;
+                @include responsive(lg) {
+                    gap: 20px;
+                }
+                @include responsive(allPhone) {
+                    display: block;
+                }
+                .left-images {
+                    height: 100%;
+                    img {
+                        @include responsive(lg) {
+                            width: 285px;
+                            height: -webkit-max-content;
+                            height: -moz-max-content;
+                            height: max-content;
+                        }
+                    }
+                }
+                .details-contents {
+                    padding: 5px 25px 5px 0;
+                    @include responsive(lg) {
+                        padding: 10px 25px 10px 0;
+                    }
+                    @include responsive(allPhone) {
+                        padding: 30px 20px;
+                        max-width: 400px;
+                    }
+                    @include responsive(vxxs) {
+                        padding: 30px 0 30px 10px;
+                    }
+                    .common-title {}
+                    .doctors-title {
+                        display: block;
+                        margin-top: 20px;
+                    }
+                    .common-para {
+                        margin-top: 20px;
+                    }
+                    .btn--custom {}
+                }
+            }
+            .single-contents {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                @include responsive(sm) {
+                    display: block;
+                }
+                @include responsive(xs) {
+                    display: block;
+                }
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba($text--body, .2);
+                }
+                .contents-para-left {
+                    min-width: 285px;
+                    padding: 30px;
+                    @include responsive(lg) {
+                        min-width: 220px;
+                        width: 220px;
+                        padding: 20px 10px;
+                    }
+                    @include responsive(sm) {
+                        padding: 20px;
+                    }
+                    @include responsive(xs) {
+                        padding: 20px;
+                    }
+                    @include responsive(vxxs) {
+                        padding: 20px 0 10px 10px;
+                    }
+                    .contents-para {
+                        @include responsive(lg) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .contents-para-right {
+                    padding: 30px;
+                    border-left: 1px solid rgba($text--body, .2);
+                    @include responsive(sm) {
+                        padding: 0px 20px 20px;
+                    }
+                    @include responsive(xs) {
+                        padding: 0px 20px 10px;
+                    }
+                    @include responsive(vxxs) {
+                        padding: 0px 0px 20px 10px;
+                    }
+                    .common-para {
+                        margin: 0;
+                        padding: 0;
+                        line-height: 27px;
+                    }
+                    .details-content-list {
+                        li {
+                            position: relative;
+                            z-index: 1;
+                            line-height: 27px;
+                            padding-left: 20px;
+                            @include responsive(lg) {
+                                font-size: 14px;
+                            }
+                            @include responsive(allPhone) {
+                                font-size: 14px;
+                            }
+                            &:not(:last-child) {
+                                padding-bottom: 15px;
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                background: $text--body;
+                                height: 8px;
+                                width: 8px;
+                                left: 0;
+                                top: 10px;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                    .details-social-list {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        li {
+                            padding-bottom: 0px !important;
+                            padding-left: 0;
+                            &::before {
+                                display: none;
+                            }
+                            &:not(:last-child) {
+                                margin-right: 10px;
+                            }
+                            a {
+                                @include box35;
+                                @include center;
+                                border: 1px solid rgba($text--body, .2);
+                                background: $bg--white;
+                                color: $text--body;
+                                font-size: 18px;
+                                -webkit-transition: all .3s;
+                                -o-transition: all .3s;
+                                transition: all .3s;
+                                &:hover {
+                                    background: $bg--base;
+                                    color: $text--white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .doctor-details-right {
+        .search-form {
+            position: relative;
+            z-index: 1;
+            .form--control {
+                height: 50px;
+                border-radius: 30px;
+                outline: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                background: #f4f4f447;
+                border: 0;
+                padding-right: 100px;
+                border: 1px solid #f4f4f447;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                margin-bottom: 50px;
+                &:focus {
+                    @include base-shadow;
+                    border: 1px solid rgba($bg--base, .2);
+                }
+            }
+            button {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0px;
+                font-size: 20px;
+                color: $text--base;
+                background: none;
+                margin: 2px;
+                padding: 0 30px;
+                border-left: 1px solid rgba($text--body, .2);
+            }
+        }
+        .single-right-details {
+            border: 1px solid rgba($text--body, .2);
+            border-radius: 10px;
+            overflow: hidden;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            .single-right-title {
+                background: $bg--base;
+                color: $text--white;
+                padding: 22px 30px;
+                margin: 0;
+                @include responsive(vxxs) {
+                    padding: 22px 10px;
+                }
+            }
+            .details-right-list {
+                li {
+                    &:not(:last-child) {
+                        a {
+                            border-bottom: 1px solid rgba($text--body, .2);
+                        }
+                    }
+                    a {
+                        padding: 20px 30px;
+                        font-weight: 600;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        @include responsive(vxxs) {
+                            padding: 20px 10px;
+                        }
+                        &:hover {
+                            color: $text--base;
+                        }
+                        i {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .appoinment-form {
+                padding: 20px 30px;
+                @include responsive(vxxs) {
+                    padding: 20px 10px;
+                }
+            }
+        }
+    }
+}

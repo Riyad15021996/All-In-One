@@ -1,0 +1,148 @@
+// Contact Area Starts
+.contact-area {}
+
+.contact-form-wrapper {
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.05);
+    background: $bg--white;
+    border-radius: 10px;
+    padding: 60px 40px;
+    @include responsive(lg) {
+        padding: 60px 20px;
+    }
+    @include responsive(allPhone) {
+        padding: 50px 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 40px 10px;
+    }
+    .contact-form-title {}
+    .section-border {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .contact--form {
+        .form--message {
+            padding: 20px 20px 0;
+            height: 85px !important;
+        }
+    }
+}
+
+.contact-address-wrapper {
+    .single-contact-address {
+        text-align: center;
+        padding: 40px 40px;
+        -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.05);
+        background: $bg--white;
+        border-radius: 10px;
+        @include responsive(xl) {
+            padding: 40px 30px;
+        }
+        @include responsive(lg) {
+            padding: 40px 10px;
+        }
+        @include responsive(allPhone) {
+            padding: 40px 100px;
+        }
+        @include responsive(xs) {
+            padding: 40px 40px;
+        }
+        @include responsive(vxxs) {
+            padding: 40px 10px;
+        }
+        .address-title {
+            margin-bottom: 20px;
+        }
+        .address-para {
+            margin: 0px auto;
+            line-height: 27px;
+            display: block;
+            a {
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                &:hover {
+                    color: $text--base;
+                }
+            }
+        }
+    }
+    .contact-calling-wrapper {
+        padding-right: 150px;
+        margin-top: 40px;
+        @include responsive(xs) {
+            padding-right: 0;
+        }
+        .call-title {
+            a {
+                color: $text--base;
+            }
+        }
+        .calling-input {
+            position: relative;
+            z-index: 1;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-top: 30px;
+            @include responsive(vxxs) {
+                border-radius: 0;
+            }
+            .form-input {
+                height: 50px;
+                outline: none;
+                border-radius: 30px;
+                border: none;
+                background: #f4f4f447;
+                padding: 0 20px;
+                padding-right: 180px;
+                @include responsive(vxxs) {
+                    margin-bottom: 20px;
+                    padding-right: 20px;
+                    width: 100%;
+                }
+            }
+            .calling-button {
+                position: absolute;
+                right: 0;
+                background: $bg--base;
+                color: $text--white;
+                height: 100%;
+                bottom: 0%;
+                top: 0;
+                line-height: 50px;
+                padding: 0px 30px;
+                @include responsive(vxxs) {
+                    position: relative;
+                    padding: 15px 25px;
+                    margin-top: 20px;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
+
+// Contact Area Ends
+// Contact Map Area Starts
+.contact-map-area {
+    position: relative;
+    margin-bottom: -70px;
+    @include responsive(allPhone) {
+        margin-bottom: 0;
+    }
+}
+
+#basic-map {
+    iframe {
+        height: 450px;
+        width: 100%;
+        @include responsive(allPhone) {
+            height: 300px;
+        }
+    }
+}
+
+// Contact Map Area Ends

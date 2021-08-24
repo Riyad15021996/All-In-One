@@ -1,0 +1,79 @@
+// Terms-Of-Servece Area Starts
+.terms-area {}
+
+.term-list-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    z-index: 9;
+    .term-list {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            a {
+                font-size: 18px;
+                font-weight: 600;
+                padding: 25px 20px;
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(46, 25, 204, 0.1);
+                box-shadow: 0px 0px 10px 0px rgba(46, 25, 204, 0.1);
+                background: $bg--white;
+                border-radius: 5px;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                @include responsive(lg) {
+                    font-size: 16px;
+                    padding: 20px 10px;
+                }
+                @include responsive(allPhone) {
+                    font-size: 16px;
+                    padding: 15px 10px;
+                }
+                @include responsive(xs) {
+                    font-size: 15px;
+                    padding: 15px 10px;
+                }
+                &.active {
+                    border-right: 2px solid $bg--base;
+                }
+            }
+        }
+    }
+}
+
+.terms-details-wrapper {
+    padding: 40px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(46, 25, 204, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(46, 25, 204, 0.1);
+    background: $bg--white;
+    border-radius: 10px;
+    @include responsive(allPhone) {
+        padding: 30px 20px;
+    }
+    @include responsive(xxs) {
+        padding: 30px 10px;
+    }
+    .single-terms {
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
+        .terms-title {}
+        .common-para {
+            margin-top: 20px;
+            line-height: 30px;
+        }
+        .terms-inner-list {
+            margin-top: 30px;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+                i {
+                    color: $text--base;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

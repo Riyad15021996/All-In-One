@@ -1,0 +1,78 @@
+// Timeline Area Starts
+.timeline-area {
+    div[class*="row"] {
+        &:not(:last-child) {
+            padding-bottom: 80px;
+            @include responsive(allPhone) {
+                padding-bottom: 50px;
+            }
+        }
+        &:nth-child(2n+2) {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+            @include responsive(allPhone) {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+            }
+            .timeline-content-wrapper {
+                margin-left: 0;
+                margin-right: 30px;
+                @include responsive(allPhone) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.timeline-image-wrapper {
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    .single-image {
+        img {
+            @include objfit;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            border-radius: 50%;
+        }
+    }
+    .timeline-years {
+        @include box100;
+        @include center;
+        background: $bg--base;
+        color: $text--white;
+        border: 4px solid $text--white;
+        position: absolute;
+        z-index: 9;
+        right: 90px;
+        top: 40px;
+    }
+}
+
+.timeline-content-wrapper {
+    padding: 70px 10px;
+    background: $bg--white;
+    text-align: center;
+    border: 40px solid $bg--base;
+    margin-left: 30px;
+    @include responsive(allPhone) {
+        margin-right: 0;
+    }
+    @include responsive(xxs) {
+        border: 20px solid $bg--base;
+    }
+    @include responsive(vxxs) {
+        border: 5px solid $bg--base;
+    }
+    .common-title {}
+    .common-para {
+        max-width: 365px;
+        margin: 20px auto 0;
+    }
+}

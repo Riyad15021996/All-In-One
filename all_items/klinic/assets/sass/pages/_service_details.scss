@@ -1,0 +1,136 @@
+// Service-Details Area Starts
+.service-details-area {
+    .service-left-content {
+        padding-right: 30px;
+        @include responsive(lg) {
+            padding-right: 0;
+        }
+        @include responsive(allPhone) {
+            padding-right: 0;
+        }
+        .service-details-content {
+            .service-details-title {
+                display: block;
+                font-weight: 600;
+            }
+            .common-para {
+                margin-top: 30px;
+            }
+            .details-list {
+                margin-top: 30px;
+                li {
+                    padding: 10px 0;
+                    i {
+                        color: $text--base;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            .service-image {
+                margin-top: 30px;
+                img {
+                    border-radius: 10px;
+                    @include objfit;
+                }
+            }
+            .common-title {
+                margin-top: 38px;
+            }
+        }
+    }
+    .service-details-right {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+        z-index: 9;
+        .search-form {
+            position: relative;
+            z-index: 1;
+            .form--control {
+                height: 50px;
+                border-radius: 30px;
+                outline: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                background: #f4f4f447;
+                border: 0;
+                padding-right: 100px;
+                border: 1px solid #f4f4f447;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                margin-bottom: 50px;
+                &:focus {
+                    @include base-shadow;
+                    border: 1px solid rgba($bg--base, .2);
+                }
+            }
+            button {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0px;
+                font-size: 20px;
+                color: $text--base;
+                background: none;
+                margin: 2px;
+                padding: 0 30px;
+                border-left: 1px solid rgba($text--body, .2);
+            }
+        }
+        .single-right-services {
+            border: 1px solid rgba($text--body, .2);
+            border-radius: 10px;
+            overflow: hidden;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            .single-right-title {
+                background: $bg--base;
+                color: $text--white;
+                padding: 22px 30px;
+                margin: 0;
+                @include responsive(vxxs) {
+                    padding: 22px 10px;
+                }
+            }
+            .service-right-list {
+                li {
+                    &:not(:last-child) {
+                        a {
+                            border-bottom: 1px solid rgba($text--body, .2);
+                        }
+                    }
+                    a {
+                        padding: 20px 30px;
+                        font-weight: 600;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        @include responsive(vxxs) {
+                            padding: 20px 10px;
+                        }
+                        &:hover {
+                            color: $text--base;
+                        }
+                        i {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .appoinment-form {
+                padding: 20px 30px;
+                @include responsive(vxxs) {
+                    padding: 20px 10px;
+                }
+            }
+        }
+    }
+}

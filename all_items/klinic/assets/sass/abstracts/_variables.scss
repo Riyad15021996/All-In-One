@@ -1,0 +1,24 @@
+/* 
+******* Variables 
+*/
+
+// Colors
+$text--base: #1e5ad7;
+$text--heading: #292929;
+$text--body: #777777;
+$text--black: #000;
+$text--white: #fff;
+// background
+$bg--base:#1e5ad7;
+$bg--black: #000;
+$bg--white: #fff;
+$bg-base--section: #1e5ad7;
+$bg--section: #f9f9f9;
+// Gradient base
+$gradient--base-up: linear-gradient(180deg, rgba($bg--base, 0.9) 0%, rgba($bg--white, 0) 100%);
+$gradient--base: linear-gradient(0deg, rgba($bg--base, 0.9) 0%, rgba($bg--white, 0) 100%);
+$gradient--base-hover: linear-gradient(0deg, rgba($bg--base, 0.9) 0%, rgba($bg--white, 0) 100%);
+// Gradient blac & white
+$gradient--White: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+$gradient--black: linear-gradient(90deg, rgba(0, 0, 0, 0.7651435574229692) 0%, rgba(0, 0, 0, 0.036852240896358524) 100%);
+$gradient--black2: linear-gradient(0deg, rgba(0, 0, 0, 0.99) 0%, rgba(0, 0, 0, 0) 100%);

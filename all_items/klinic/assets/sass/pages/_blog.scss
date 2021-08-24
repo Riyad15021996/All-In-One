@@ -1,0 +1,282 @@
+.blog-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    &::before,
+    &::after {
+        @include line-font;
+        content: "\f104";
+        cursor: pointer;
+        font-size: 24px;
+        padding: 5px;
+        color: $text--heading;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+    &::after {
+        content: "\f105";
+    }
+    li {
+        &:not(:last-child) {
+            margin-right: 10px;
+            @include responsive(vxxs) {
+                margin-right: 5px;
+            }
+        }
+        a {
+            @include box40;
+            @include center;
+            font-size: 20px;
+            font-weight: 600;
+            background: $bg--white;
+            border: 1px solid rgba($text--body, .2);
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            @include responsive(vxxs) {
+                font-size: 15px;
+                @include box35;
+            }
+            &.active {
+                background: $bg--base;
+                color: $text--white;
+            }
+            &:hover {
+                background: $bg--base;
+                color: $text--white;
+            }
+        }
+    }
+}
+
+.blog-right-contents {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 130px;
+    z-index: 9;
+    .single-blog-right {
+        .search-form {
+            position: relative;
+            z-index: 1;
+            .form--control {
+                height: 50px;
+                border-radius: 30px;
+                outline: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                background: #f4f4f447;
+                border: 0;
+                padding-right: 100px;
+                border: 1px solid #f4f4f447;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                margin-bottom: 50px;
+                &:focus {
+                    @include base-shadow;
+                    border: 1px solid rgba($bg--base, .2);
+                }
+            }
+            button {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0px;
+                font-size: 20px;
+                color: $text--base;
+                background: none;
+                margin: 2px;
+                padding: 0 30px;
+                border-left: 1px solid rgba($text--body, .2);
+            }
+        }
+        .single-right-details {
+            border: 1px solid rgba($text--body, .2);
+            border-radius: 10px;
+            overflow: hidden;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            .single-right-title {
+                background: $bg--base;
+                color: $text--white;
+                padding: 22px 30px;
+                margin: 0;
+                @include responsive(vxxs) {
+                    padding: 22px 10px;
+                }
+            }
+            .details-right-list {
+                li {
+                    &:not(:last-child) {
+                        a {
+                            border-bottom: 1px solid rgba($text--body, .2);
+                        }
+                    }
+                    a {
+                        padding: 20px 30px;
+                        font-weight: 600;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        @include responsive(vxxs) {
+                            padding: 20px 10px;
+                        }
+                        &:hover {
+                            color: $text--base;
+                        }
+                    }
+                }
+            }
+            .details-right-post {
+                .post-flex-content {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 15px 30px;
+                    @include responsive(xl) {
+                        padding: 20px 20px;
+                        gap: 15px;
+                    }
+                    @include responsive(lg) {
+                        padding: 20px 10px;
+                        gap: 8px;
+                    }
+                    @include responsive(allPhone) {
+                        width: 100%;
+                        gap: 15px;
+                        padding: 15px 10px;
+                    }
+                    @include responsive(vxxs) {
+                        display: block;
+                    }
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba($text--body, .2);
+                    }
+                    .post-images {
+                        display: block;
+                        border-radius: 50%;
+                        max-height: 50px;
+                        @include responsive(vxxs) {
+                            height: 50px;
+                            width: 50px;
+                            margin-bottom: 15px;
+                        }
+                        img {
+                            @include objfit;
+                            border-radius: 50%;
+                        }
+                    }
+                    .post-contents {
+                        .post-title {
+                            line-height: 22px;
+                            max-width: 210px;
+                            &:hover {
+                                color: $text--base;
+                            }
+                        }
+                        .post-list {
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            li {
+                                &:not(:last-child) {
+                                    padding-right: 10px;
+                                    border-right: 1px solid rgba($bg--base, .8);
+                                    @include responsive(lg) {
+                                        padding-right: 5px;
+                                    }
+                                }
+                                &:not(:first-child) {
+                                    padding-left: 10px;
+                                    @include responsive(lg) {
+                                        padding-left: 5px;
+                                    }
+                                }
+                                -webkit-transition: all .2s;
+                                -o-transition: all .2s;
+                                transition: all .2s;
+                                &:hover {
+                                    color: $text--base;
+                                }
+                                @include responsive(lg) {
+                                    font-size: 14px;
+                                }
+                                @include responsive(allPhone) {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .blog-tag-lists {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                padding: 30px;
+                @include responsive(xl) {
+                    padding: 30px 20px;
+                }
+                @include responsive(lg) {
+                    padding: 20px 10px;
+                }
+                @include responsive(allPhone) {
+                    padding: 20px 10px;
+                }
+                li {
+                    &:not(:last-child) {
+                        a {}
+                    }
+                    a {
+                        border: 1px solid rgba($text--body, .2);
+                        display: inline-block;
+                        padding: 20px 30px;
+                        margin: 5px 5px;
+                        font-weight: 600;
+                        border-radius: 5px;
+                        -webkit-transition: all .3s;
+                        -o-transition: all .3s;
+                        transition: all .3s;
+                        @include responsive(lg) {
+                            padding: 15px 20px;
+                        }
+                        @include responsive(xs) {
+                            padding: 15px 20px;
+                        }
+                        &:hover {
+                            background: $bg--base;
+                            color: $text--white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
