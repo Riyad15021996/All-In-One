@@ -1,0 +1,44 @@
+// Colors
+$text--base: #ff007a;
+$text--base2:#f8c301;
+$text--base3:#ffaa17;
+$text--base4:#f9a21e;
+$text--base4-red:#fd0066;
+$text--base5:#f70065;
+$text--heading1: #232323;
+$text--body1: #555555;
+$text--black: #000;
+$text--white: #fff;
+// background
+$bg--base:#ff007a;
+$bg--base2:#f8c301;
+$bg--base3:#ffaa17;
+$bg--base4:#f9a21e;
+$bg--base4-red:#fd0066;
+$bg--base5:#f70065;
+$bg--black: #000;
+$bg-black--btn: #222222;
+$bg--white: #fff;
+$bg-base--section: #ff007a;
+$bg--section: #2f0063;
+$bg2--section: #f7f7f7;
+$bg--section2: #232323;
+$bg--section3: #041d38;
+$bg--section4: #1f1f1f;
+// Gradient base
+$gradient--base-up: linear-gradient(180deg, rgba($bg--base, 0.9) 0%, rgba($bg--white, 0) 100%);
+$gradient--base: linear-gradient(0deg, rgba($bg--base, 0.9) 0%, rgba($bg--white, 0) 100%);
+$gradient--base-hover: linear-gradient(0deg, rgba($bg--base, 0.9) 0%, rgba($bg--white, 0) 100%);
+// Gradient base2
+$gradient--base2: linear-gradient(0deg, rgba($bg--base2, 0.9) 0%, rgba($bg--white, 0) 100%);
+$gradient--base-hover2: linear-gradient(0deg, rgba($bg--base2, 0.9) 0%, rgba($bg--white, 0) 100%);
+// Gradient base3
+$gradient--base3: linear-gradient(0deg, rgba($bg--base3, 0.9) 0%, rgba($bg--white, 0) 100%);
+$gradient--base-hover3: linear-gradient(0deg, rgba($bg--base3, 0.9) 0%, rgba($bg--white, 0) 100%);
+// Gradient base5
+$gradient--base5: linear-gradient(90deg, rgba($bg--base5, 0.3) 0%, rgba($bg--base5, .90) 100%);
+$gradient--base-hover5: linear-gradient(90deg, rgba($bg--base5, 0.9) 0%, rgba($bg--base5, .5) 100%);
+// Gradient blac & white
+$gradient--White: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+$gradient--black: linear-gradient(90deg, rgba(0, 0, 0, 0.7651435574229692) 0%, rgba(0, 0, 0, 0.036852240896358524) 100%);
+$gradient--black2: linear-gradient(0deg, rgba(0, 0, 0, 0.99) 0%, rgba(0, 0, 0, 0) 100%);

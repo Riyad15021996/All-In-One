@@ -1,0 +1,266 @@
+/*=========================================================
+          [ button Style ]
+=========================================================*/
+
+.btn--custom {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 17px 30px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all .3s;
+    position: relative;
+    border-radius: 10px;
+    z-index: 1;
+    @include responsive(allPhone) {
+        font-size: 15px;
+    }
+    @include responsive(vxxs) {
+        font-size: 14px;
+        padding: 15px 25px;
+    }
+}
+
+.btn--singles {
+    color: $text--body1;
+    font-size: 16px;
+    padding: 0;
+    transition: all .3s;
+    position: relative;
+    z-index: 1;
+    &::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 30px;
+        right: -35px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $bg--base3;
+        transition: all .3s;
+    }
+    &:hover {
+        color: $text--base3;
+        &::after {
+            width: 50px;
+            right: -55px;
+        }
+    }
+}
+
+.btn--one {
+    background: $bg--base;
+    border: 2px solid $bg--base;
+    color: $text--white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    span {
+        border-bottom: 1px solid #fff;
+    }
+    &::before {
+        @include beforeafter;
+        background: $bg--white;
+        border-color: rgba($bg--base, .2);
+        z-index: -1;
+        transform: scale(0);
+        transition: all .4s;
+    }
+}
+
+.btn--one:hover {
+    background: $bg--white;
+    border: 2px solid rgba($bg--base, .2);
+    color: $text--base;
+    &::before {
+        transform: scale(1);
+    }
+}
+
+.btn--two {
+    background: $bg-black--btn;
+    border: 2px solid $bg-black--btn;
+    color: $text--white;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    &::before {
+        @include beforeafter;
+        background: $bg--base2;
+        border-color: rgba($bg--base2, .2);
+        z-index: -1;
+        transform: scale(0);
+        border-radius: 10px;
+        transition: all .4s;
+    }
+}
+
+.btn--two:hover {
+    background: $bg--base2;
+    border: 2px solid rgba($bg--base2, .2);
+    &::before {
+        transform: scale(1);
+    }
+}
+
+.btn-outline--two {
+    border: 1px solid $bg-black--btn;
+    color: $text--heading1;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    &::before {
+        @include beforeafter;
+        background: $bg--base2;
+        border-color: rgba($bg--base2, .2);
+        z-index: -1;
+        transform: scale(0);
+        border-radius: 10px;
+        transition: all .4s;
+    }
+}
+
+.btn-outline--two:hover {
+    color: $text--white;
+    background: $bg--base2;
+    border-color: rgba($bg--base2, .2);
+    &::before {
+        transform: scale(1);
+    }
+}
+
+.no-radius {
+    border-radius: 0 !important;
+}
+
+.btn--three {
+    background: none;
+    border: 1px solid rgba($bg--black, .5);
+    color: $text--heading1;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        background: $bg--base3;
+        color: $text--white;
+        border-color: rgba($bg--base3, .2);
+        &::before {
+            background: $bg--base3;
+            transform: scale(1);
+        }
+        &::after {
+            border-color: rgba($bg--base3, 1);
+        }
+    }
+    &::before {
+        @include beforeafter;
+        background: $bg--base3;
+        border-color: rgba($bg--base3, .2);
+        z-index: -1;
+        transform: scale(0);
+        transition: all .4s;
+    }
+    &::after {
+        border: 1px solid rgba($bg--black, .5);
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: -5px;
+        left: 5px;
+    }
+}
+
+.btn--four {
+    background: $bg--base4-red;
+    color: $text--white;
+    border-radius: 4px;
+    &:hover {
+        background: $bg--base4;
+        &::before {
+            transform: scale(1);
+        }
+    }
+    &::before {
+        @include beforeafter;
+        background: $bg--base4;
+        z-index: -1;
+        border-radius: 4px;
+        transform: scale(0);
+        transition: all .3s;
+    }
+}
+
+.btn-outline--four {
+    background: none;
+    border: 1px solid rgba($bg--white, .1);
+    border-radius: 4px;
+    &:hover {
+        background: $bg--base4;
+        &::before {
+            transform: scale(1);
+        }
+    }
+    &::before {
+        @include beforeafter;
+        background: $bg--base4;
+        z-index: -1;
+        border-radius: 4px;
+        transform: scale(0);
+        transition: all .3s;
+    }
+}
+
+.btn--five {
+    background: none;
+    color: $text--white;
+    border-radius: 4px;
+    text-decoration: underline;
+    span {
+        display: inline-block;
+        border-bottom: 1px solid;
+    }
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+    &::before {
+        @include beforeafter;
+        background: $gradient--base5;
+        z-index: -1;
+        border-radius: 4px;
+        transition: all .3s;
+        width: 50%;
+    }
+}
+
+.btn--five-capsole {
+    &:hover {
+        &::before {
+            border-radius: 4px;
+        }
+    }
+    &::before {
+        width: 40%;
+        border-radius: 50%;
+    }
+}
+
+.btn--five-full {
+    &:hover {
+        &::before {
+            background: $gradient--base-hover5;
+        }
+    }
+    &::before {
+        width: 100%;
+        transition: all .3s;
+    }
+}
